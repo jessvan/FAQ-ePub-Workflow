@@ -193,3 +193,27 @@ Pandoc is a converter, you need to first install it
 
 ### solution
 a guide to set it up & use it to recreate files
+
+
+## The Table of Contents doesn't show all my chapters (marked by # H1 syntax)
+
+**Translation**
+The ePub is not rendering the # as H1 header markup, and instead probably just thinks you mean hashtag.
+
+The issue looks like this:
+
+![](imgs/chapter-break.png)
+
+### solution
+Make sure all your files have an empty line at the end, otherwise when book.md is created (which combines all the md files) it just reads the first # as a continuation of the sentence before.
+
+For example, if you have 3 chapters and only 2 show, check the end of chapter 2 and add a line space after the last sentence. Create ePub again, this should fix the problem.
+
+## The ePub has all the content twice
+
+**Translation**
+It's likely there is a tmp.md file in the md folder with your other files, when you make an ePub using the make file a book.md file is generated which combines all the .md files and it is including this tmp.md folder unncessarily. It is safe to remove it and then you'll have the content displayed just once.
+
+### solution
+
+delete the template.md or tmp.md file 
