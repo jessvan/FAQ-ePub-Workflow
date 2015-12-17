@@ -24,9 +24,9 @@ Hybrid-Publishing-Workflow.md
 
 **Translation:**
 Q: What does this error mean?
-This error means something's gone wrong in the section that is meant to use the language YAML.
+This error means something's gone wrong in the metadata section at the top of your file.
 
-YAML is the language used for the metadata block in our Markdown source files. If there is an error in the metadata, pandoc will give this 'Could not parse YAML header' message. This is usually caused by spaces or characters being where they shouldn't.
+YAML is the language used for the metadata block in our Markdown source files. If there is an error in the metadata, pandoc will give this 'Could not parse YAML header' message. This is usually caused by spaces or characters being in the wrong place according to YAML's structure.
 
 Pandoc has more about epub-metadata on:
 <a href="http://pandoc.org/README.html#epub-metadata">http://pandoc.org/README.html#epub-metadata</a>.
@@ -66,7 +66,12 @@ ImportError: No module named django.utils.html
 make: *** [book.md] Error 1
 C02Q52SEG8WM:HackableDEF-copy zylvj$ 
 
+### solution
+download & install django
+or - remove this script for TOD and see if the book works without it
+
 **Translation**
+This script uses another program, django, but you don't have it installed on your computer.
 
 ## font problem: italic styles render in iBooks as bold italic
 
